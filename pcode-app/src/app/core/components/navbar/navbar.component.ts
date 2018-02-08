@@ -11,15 +11,15 @@ export class NavbarComponent implements OnInit {
   constructor() {
     this.navLinks = [
       {
-        label: 'Articles',
+        label: 'Developers',
         url: './home'
       },
       {
-        label: 'Materials',
+        label: 'Sessions',
         url: './login'
       },
       {
-        label: 'About',
+        label: 'Profile',
         url: './notfound'
       },
     ];
