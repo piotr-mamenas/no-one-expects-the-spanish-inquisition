@@ -9,7 +9,9 @@ import { MatTabsModule } from '@angular/material';
 import { MdToolbarModule } from '@angular/material';
 import { MdCardModule } from '@angular/material';
 import { MatProgressSpinnerModule } from '@angular/material';
-import { MatGridListModule } from '@angular/material';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MdIconModule } from '@angular/material/icon';
+import { MdIconRegistry } from '@angular/material/icon';
 
 import { Router, RouterModule } from '@angular/router';
 
@@ -25,6 +27,7 @@ import 'hammerjs';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpModule,
+    MdIconModule,
     MdButtonModule,
     MdCheckboxModule,
     MatTabsModule,
@@ -39,6 +42,7 @@ import 'hammerjs';
     CommonModule,
     ReactiveFormsModule,
     MdButtonModule,
+    MdIconModule,
     MdCheckboxModule,
     MatTabsModule,
     BrowserAnimationsModule,
@@ -51,4 +55,8 @@ import 'hammerjs';
   ]
 })
 
-export class SharedModule { }
+export class SharedModule {
+  constructor(mdIconRegistry: MdIconRegistry){
+    mdIconRegistry.registerFontClassAlias('fontawesome','fa');
+  }
+}
