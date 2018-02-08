@@ -9,6 +9,7 @@ import { MatTabsModule } from '@angular/material';
 import { MdToolbarModule } from '@angular/material';
 import { MdCardModule } from '@angular/material';
 import { MatProgressSpinnerModule } from '@angular/material';
+import { MatGridListModule } from '@angular/material';
 
 import { Router, RouterModule } from '@angular/router';
 
@@ -30,7 +31,8 @@ import 'hammerjs';
     MdToolbarModule,
     RouterModule,
     MdCardModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatGridListModule
   ],
   providers: [ ],
   exports: [
@@ -44,7 +46,8 @@ import 'hammerjs';
     RouterModule,
     MdCardModule,
     HttpModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatGridListModule
   ]
 })
 
