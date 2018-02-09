@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCode.Api", "PCode.Api\PCode.Api.csproj", "{55005020-05B7-404F-8CE3-F44FB7B10972}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCode.Domain", "PCode.Domain\PCode.Domain.csproj", "{D2D3D284-7D63-4FAE-A264-AE5CDB37F6CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55005020-05B7-404F-8CE3-F44FB7B10972}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55005020-05B7-404F-8CE3-F44FB7B10972}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55005020-05B7-404F-8CE3-F44FB7B10972}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55005020-05B7-404F-8CE3-F44FB7B10972}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2D3D284-7D63-4FAE-A264-AE5CDB37F6CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2D3D284-7D63-4FAE-A264-AE5CDB37F6CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2D3D284-7D63-4FAE-A264-AE5CDB37F6CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2D3D284-7D63-4FAE-A264-AE5CDB37F6CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C671DFC1-7970-4C18-AAE6-F591D62BDD34}
+	EndGlobalSection
+EndGlobal

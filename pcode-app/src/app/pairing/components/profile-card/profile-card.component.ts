@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IProfile } from '../../../interfaces/iprofile.type';
 
 @Component({
   selector: 'pairing-profile-card',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile-card.component.css']
 })
 export class ProfileCardComponent implements OnInit {
+  public profile : IProfile;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
+  displayProfile() {
+    console.log("Hi");
+  }
 }
