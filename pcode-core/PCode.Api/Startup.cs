@@ -1,9 +1,13 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PCode.Api.Infrastructure;
+using PCode.Api.Infrastructure.Repositories;
+using PCode.Domain.Interfaces;
+using PCode.Domain.Interfaces.Repositories;
 
 namespace PCode.Api
 {
@@ -19,8 +23,20 @@ namespace PCode.Api
         public void ConfigureServices(IServiceCollection services)
         {
             const string connection = @"data source=.\SQLEXPRESS; initial catalog=Pcode.Core; integrated security=SSPI";
-            services.AddMvc();
+            
             services.AddDbContext<PcodeContext>(options => options.UseSqlServer(connection));
+
+            services.AddScoped<ISkillRepository, SkillRepository>();
+            services.AddScoped<IProfileRepository, ProfileRepository>();
+            
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+
+            services.AddAutoMapper();
+            services.AddMvc().AddJsonOptions(options =>
+            {
+                options.SerializerSettings.ContractResolver = 
+                new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver();
+            });
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

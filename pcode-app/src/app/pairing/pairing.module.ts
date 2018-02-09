@@ -8,6 +8,9 @@ import { SharedModule } from '../shared/shared.module';
 import { ProfileCardComponent } from './components/profile-card/profile-card.component'
 import { ProfilePageComponent } from './components/profile-page/profile-page.component'
 
+// Module Services
+import { ProfileService } from './services/profile.service';
+
 import 'hammerjs';
 
 @NgModule({
@@ -18,7 +21,9 @@ import 'hammerjs';
   imports: [
     SharedModule
   ],
-  providers: [ ],
+  providers: [
+    ProfileService
+  ],
   exports: [
     ProfileCardComponent,
     ProfilePageComponent

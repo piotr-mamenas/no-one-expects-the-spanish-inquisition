@@ -7,7 +7,5 @@ namespace PCode.Domain
     {
         [Key]
         public Guid Guid { get; set; }
-
-        public bool IsDeleted { get; set; }
     }
 }
