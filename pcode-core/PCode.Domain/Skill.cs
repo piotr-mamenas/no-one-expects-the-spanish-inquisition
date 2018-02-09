@@ -1,13 +1,9 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using PCode.Domain.Interfaces;
 
 namespace PCode.Domain
 {
-    public class Skill
+    public class Skill : BaseEntity, IEntityRoot
     {
-        [Key]
-        public Guid Guid { get; set; }
-
         public string Name { get; set; }
 
         public string Score { get; set; }

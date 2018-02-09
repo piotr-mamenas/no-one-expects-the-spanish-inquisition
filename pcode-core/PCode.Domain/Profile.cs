@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using PCode.Domain.Interfaces;
 
 namespace PCode.Domain
 {
-    public class Profile
+    public class Profile : BaseEntity, IEntityRoot
     {
-        [Key]
-        public Guid Guid { get; set; }
-
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
