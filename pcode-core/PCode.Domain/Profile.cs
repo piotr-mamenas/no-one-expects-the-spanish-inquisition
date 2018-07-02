@@ -14,5 +14,10 @@ namespace PCode.Domain
         public string Level { get; set; }
 
         public ICollection<Skill> Skills { get; set; }
+
+        public Profile()
+        {
+            Skills = new List<Skill>();
+        }
     }
 }

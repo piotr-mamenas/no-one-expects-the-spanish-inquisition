@@ -10,7 +10,7 @@ using System;
 
 namespace PCode.Api.Migrations
 {
-    [DbContext(typeof(PcodeContext))]
+    [DbContext(typeof(MainDatabaseContext))]
     partial class PcodeContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

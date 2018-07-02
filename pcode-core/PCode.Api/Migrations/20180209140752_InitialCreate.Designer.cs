@@ -10,7 +10,7 @@ using System;
 
 namespace PCode.Api.Migrations
 {
-    [DbContext(typeof(PcodeContext))]
+    [DbContext(typeof(MainDatabaseContext))]
     [Migration("20180209140752_InitialCreate")]
     partial class InitialCreate
     {
