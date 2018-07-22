@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using PCode.Api.Resources;
-using PCode.Domain;
 using PCode.Domain.Interfaces;
 using PCode.Domain.Interfaces.Repositories;
 
@@ -25,11 +24,15 @@ namespace PCode.Api.Controllers
         }
 
         [HttpGet("")]
-        public async Task<IEnumerable<ProfileResource>> GetProfiles()
+        public async Task<IActionResult> GetDashboardProfilesAsync()
         {
-            var profiles = await _profileRepository.FindAsync(p => true);
-            
-            return _mapper.Map<IEnumerable<Domain.Profile>, IEnumerable<ProfileResource>>(profiles);
+            var profiles = await _profileRepository.GetAllProfilesAsync();
+
+            if (profiles == null)
+            {
+                return NotFound();
+            }
+            return Ok(_mapper.Map<IEnumerable<Domain.Profile>, IEnumerable<ProfileResource>>(profiles));
         }
     }
 }

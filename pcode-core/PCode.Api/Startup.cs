@@ -24,7 +24,7 @@ namespace PCode.Api
         {
             const string connection = @"data source=.\SQLEXPRESS; initial catalog=Pcode.Core; integrated security=SSPI";
             
-            services.AddDbContext<PcodeContext>(options => options.UseSqlServer(connection));
+            services.AddDbContext<MainDatabaseContext>(options => options.UseSqlServer(connection));
 
             services.AddScoped<ISkillRepository, SkillRepository>();
             services.AddScoped<IProfileRepository, ProfileRepository>();

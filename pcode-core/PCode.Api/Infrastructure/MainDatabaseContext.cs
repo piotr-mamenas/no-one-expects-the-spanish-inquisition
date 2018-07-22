@@ -3,9 +3,9 @@ using PCode.Domain;
 
 namespace PCode.Api.Infrastructure
 {
-    public class PcodeContext : DbContext
+    public class MainDatabaseContext : DbContext
     {
-        public PcodeContext(DbContextOptions<PcodeContext> options)
+        public MainDatabaseContext(DbContextOptions<MainDatabaseContext> options)
             : base(options)
         { }
 

@@ -6,6 +6,6 @@ namespace PCode.Domain
     {
         public string Name { get; set; }
 
-        public string Score { get; set; }
+        public int Score { get; set; }
     }
 }

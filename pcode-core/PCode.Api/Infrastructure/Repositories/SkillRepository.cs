@@ -1,13 +1,14 @@
-﻿using PCode.Domain;
-using PCode.Domain.Interfaces.Repositories;
+﻿using PCode.Domain.Interfaces.Repositories;
 
 namespace PCode.Api.Infrastructure.Repositories
 {
-    public class SkillRepository : Repository<Skill>, ISkillRepository
+    public class SkillRepository : ISkillRepository
     {
-        public SkillRepository(PcodeContext context)
-            : base(context)
+        private readonly MainDatabaseContext _context;
+
+        public SkillRepository(MainDatabaseContext context)
         {
+            _context = context;
         }
     }
 }

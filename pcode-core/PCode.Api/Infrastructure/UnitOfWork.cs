@@ -7,17 +7,18 @@ namespace PCode.Api.Infrastructure
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly PcodeContext _context;
+        private readonly MainDatabaseContext _context;
 
-        public UnitOfWork(PcodeContext context)
+        public UnitOfWork(MainDatabaseContext context)
         {
             _context = context;
-            Profiles = new ProfileRepository(_context);
-            Skills = new SkillRepository(context);
+
+            _profiles = new ProfileRepository(_context);
+            _skills = new SkillRepository(context);
         }
 
-        private IProfileRepository Profiles { get; }
-        private ISkillRepository Skills { get; }
+        private readonly IProfileRepository _profiles;
+        private readonly ISkillRepository _skills;
 
         public async Task<int> CompleteAsync()
         {
